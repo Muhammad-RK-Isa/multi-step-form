@@ -19,60 +19,70 @@
 
   <!-- Sidebar -->
   <div class="container">
+    <!-- container__top-img for mobile devices -->
+    <picture class="container__top-img">
+      <source srcset="assets/images/bg-sidebar-mobile.svg" media="(max-width:640px)">
+      <img src="" alt="">
+    </picture>
+
     <div class="sidebar">
-      <div class="flex-group">
-        <div class="step active">1</div>
-        <div class="step-info">
-          <p>STEP 1</p>
-          <h4>YOUR INFO</h4>
+      <div class="sidebar__content">
+        <div class="step-flex-group">
+          <div class="step active">1</div>
+          <div class="step-info">
+            <p>STEP 1</p>
+            <h4>YOUR INFO</h4>
+          </div>
         </div>
-      </div>
-      <div class="flex-group">
-        <div class="step">2</div>
-        <div class="step-info">
-          <p>STEP 2</p>
-          <h4>SELECT YOUR PLAN</h4>
+        <div class="step-flex-group">
+          <div class="step">2</div>
+          <div class="step-info">
+            <p>STEP 2</p>
+            <h4>SELECT YOUR PLAN</h4>
+          </div>
         </div>
-      </div>
-      <div class="flex-group">
-        <div class="step">3</div>
-        <div class="step-info">
-          <p>STEP 3</p>
-          <h4>ADD-ONS</h4>
+        <div class="step-flex-group">
+          <div class="step">3</div>
+          <div class="step-info">
+            <p>STEP 3</p>
+            <h4>ADD-ONS</h4>
+          </div>
         </div>
-      </div>
-      <div class="flex-group">
-        <div class="step">4</div>
-        <div class="step-info">
-          <p>STEP 4</p>
-          <h4>SUMMARY</h4>
+        <div class="step-flex-group">
+          <div class="step">4</div>
+          <div class="step-info">
+            <p>STEP 4</p>
+            <h4>SUMMARY</h4>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Content Personal Info -->
-    <div class="content">
+    <div class="contents">
 
       <!-- Personal info -->
-      <div class="content__main personal-info">
-        <div class="content__heading">
-          <h1>Personal info</h1>
-          <p>Please provide your name, email address, and phone number.</p>
+      <div class="content personal-info">
+        <div class="content__main">
+          <div class="content__heading">
+            <h1>Personal info</h1>
+            <p>Please provide your name, email address, and phone number.</p>
+          </div>
+          <form action="" class="content__input-area">
+            <div class="label-flex-group">
+              <label for="name">Name</label>
+            </div>
+            <input id="name" type="text" placeholder="e.g. Clark Benzamin">
+            <div class="label-flex-group">
+              <label for="email">Email address</label>
+            </div>
+            <input type="email" placeholder="e.g. benzamin@email.com">
+            <div class="label-flex-group">
+              <label for="phone-number">Phone number</label>
+            </div>
+            <input type="number" placeholder="e.g. +1 234 567 890">
+          </form>
         </div>
-        <form action="" class="content__input-area">
-          <div class="label-flex-group">
-            <label for="name">Name</label>
-          </div>
-          <input id="name" type="text" placeholder="e.g. Clark Benzamin">
-          <div class="label-flex-group">
-            <label for="email">Email address</label>
-          </div>
-          <input type="email" placeholder="e.g. benzamin@email.com">
-          <div class="label-flex-group">
-            <label for="phone-number">Phone number</label>
-          </div>
-          <input type="number" placeholder="e.g. +1 234 567 890">
-        </form>
 
         <!-- Navigation -->
         <div class="navigation">
@@ -82,60 +92,70 @@
       </div>
 
       <!-- Plans -->
-      <div class="content__main plans">
-        <div class="content__heading">
-          <h1>Select your plan</h1>
-          <p>You have the option of monthly or yearly billing.</p>
-        </div>
-
-        <div class="plans__container">
-          <!-- Plan arcade -->
-          <input type="radio" id="arcade" name="plan">
-          <label for="arcade" class="plan">
-            <img src="assets/images/icon-arcade.svg" alt="">
-            <div class="plan-name-flex-box">
-              <h4>Arcade</h4>
-              <p>$9/mo</p>
-            </div>
-          </label>
-
-          <!-- Plan advanced -->
-          <input type="radio" id="advanced" name="plan">
-          <label for="advanced" class="plan">
-            <img src="assets/images/icon-advanced.svg" alt="">
-            <div class="plan-name-flex-box">
-              <h4>Advanced</h4>
-              <p>$12/mo</p>
-            </div>
-          </label>
-
-          <!-- Plan Pro -->
-          <input type="radio" id="pro" name="plan">
-          <label for="pro" class="plan">
-            <img src="assets/images/icon-pro.svg" alt="">
-            <div class="plan-name-flex-box">
-              <h4>Pro</h4>
-              <p>$15/mo</p>
-            </div>
-          </label>
-
-          <!-- plan period -->
-          <div class="plan-period">
-            <p>Monthly</p>
-            <img class="toggle-img toggle-left" src="assets/images/icon-toggle-switch-left.svg" alt="">
-            <img class="toggle-img toggle-right" src="assets/images/icon-toggle-switch-right.svg" alt="">
-            <p>Yearly</p>
+      <div class="plans content">
+        <div class="content__main">
+          <!-- Plans heading -->
+          <div class="content__heading">
+            <h1>Select your plan</h1>
+            <p>You have the option of monthly or yearly billing.</p>
           </div>
 
+          <!-- Plans container -->
+          <div class="plans__container">
+            <!-- Plan arcade -->
+            <input type="radio" id="arcade" name="plan">
+            <label for="arcade" class="plan">
+              <img src="assets/images/icon-arcade.svg" alt="">
+              <div class="plan-name-flex-box">
+                <h4>Arcade</h4>
+                <p>$9/mo</p>
+                <h6>2 months free</h6>
+              </div>
+            </label>
+            <!-- Plan advanced -->
+            <input type="radio" id="advanced" name="plan">
+            <label for="advanced" class="plan">
+              <img src="assets/images/icon-advanced.svg" alt="">
+              <div class="plan-name-flex-box">
+                <h4>Advanced</h4>
+                <p>$12/mo</p>
+                <h6>2 months free</h6>
+              </div>
+            </label>
+            <!-- Plan Pro -->
+            <input type="radio" id="pro" name="plan">
+            <label for="pro" class="plan">
+              <img src="assets/images/icon-pro.svg" alt="">
+              <div class="plan-name-flex-box">
+                <h4>Pro</h4>
+                <p>$15/mo</p>
+                <h6>2 months free</h6>
+              </div>
+            </label>
+          </div>
+          <!-- plan period -->
+          <div class="plan-period">
+            <input type="radio" id="yearly" name="period">
+            <label for="yearly" class="period" onclick="periodSelectorYearly()">
+              <p>Yearly</p>
+            </label>
+            <img class="toggle-img toggle-left" src="assets/images/icon-toggle-switch-left.svg" alt="">
+            <img class="toggle-img toggle-right" src="assets/images/icon-toggle-switch-right.svg" alt="">
+            <input type="radio" id="monthly" name="period">
+            <label for="monthly" class="period" onclick="periodSelectorMonthly()">
+              <p>Monthly</p>
+            </label>
+          </div>
         </div>
 
         <!-- Navigation -->
         <div class="navigation">
           <button type="button" class="btn-primary" id="plans-next-btn">Next Step</button>
-          <button type="button" class="back-btn" id="plans-previous-btn">Go Back</button>
+          <button type="button" class="previous-btn" id="plans-previous-btn">Go Back</button>
         </div>
-        
+
       </div>
+
     </div>
   </div>
 
