@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'font-bold';
-    src: url(/assets/fonts/Ubuntu-Bold.ttf);
+    src: url('assets/fonts/Ubuntu-Bold.ttf');
 }
 
 @font-face {
     font-family: 'font-medium';
-    src: url(/assets/fonts/Ubuntu-Medium.ttf);
+    src: url('assets/fonts/Ubuntu-Medium.ttf');
 }
 
 @font-face {
     font-family: 'font-regular';
-    src: url(/assets/fonts/Ubuntu-Regular.ttf);
+    src: url('assets/fonts/Ubuntu-Regular.ttf');
 }
 
 
@@ -274,17 +274,16 @@ input:focus {
     display: none;
 }
 
-/* .free{
-    display: ;
-} */
-
-
 .plan-period>input {
     display: none;
 }
 
 .toggle-right {
     display: none;
+}
+
+.plan-period>input:checked + label>p {
+    color: var(--color-primary);
 }
 
 #yearly:checked~.toggle-right {
