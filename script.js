@@ -2,26 +2,52 @@
 
 const steps = document.getElementsByClassName('step');
 const contentPersonalInfo = document.getElementsByClassName('personal-info')[0];
-const contentPlan = document.getElementsByClassName('plans')[0];
+const contentPlans = document.getElementsByClassName('plans')[0];
 const contentAddOns = document.getElementsByClassName('add-ons')[0];
 const contentSummary = document.getElementsByClassName('summary')[0];
 const personalInfoNextBtn = document.getElementById('personal-info-next-btn');
-const plansPreviousBtn = document.getElementById('plans-previous-btn')
+const plansPreviousBtn = document.getElementById('plans-previous-btn');
+const plansNextBtn = document.getElementById('plans-next-btn');
+const addOnsPreviousBtn = document.getElementById('add-ons-previous-btn');
 
 
+// Personal info navigation 
 personalInfoNextBtn.addEventListener('click', () => {
     contentPersonalInfo.style.display = 'none';
-    contentPlan.style.display = 'flex';
+    contentPlans.style.display = 'flex';
     steps[0].classList.toggle('active');
     steps[1].classList.toggle('active');
 });
 
+
+// Plans navigation
+// Next 
+plansNextBtn.addEventListener('click', () => {
+    contentPlans.style.display = 'none';
+    contentAddOns.style.display = 'flex';
+    steps[1].classList.toggle('active');
+    steps[2].classList.toggle('active');
+});
+
+// Previous 
 plansPreviousBtn.addEventListener('click', () => {
-    contentPlan.style.display = 'none';
+    contentPlans.style.display = 'none';
     contentPersonalInfo.style.display = 'flex';
     steps[1].classList.toggle('active');
     steps[0].classList.toggle('active');
 });
+
+// Add-ons navigation 
+// Next 
+
+// Previous 
+addOnsPreviousBtn.addEventListener('click', () => {
+    contentAddOns.style.display = 'none';
+    contentPlans.style.display = 'flex';
+    steps[1].classList.toggle('active');
+    steps[2].classList.toggle('active');
+});
+
 
 // Plans container
 const periodSelectorYearly = () => {
@@ -41,6 +67,7 @@ const periodSelectorYearly = () => {
     }
 };
 
+// Period Selector 
 const periodSelectorMonthly = () => {
     const planBox1 = document.getElementsByClassName('plan-name-flex-box')[0];
     const planBox2 = document.getElementsByClassName('plan-name-flex-box')[1];
@@ -57,4 +84,6 @@ const periodSelectorMonthly = () => {
         planBox.querySelector('h6').style.display = 'none';
     };
 };
+
+// Add-on 
 
