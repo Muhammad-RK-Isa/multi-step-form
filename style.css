@@ -279,6 +279,7 @@ input:focus {
 
 .plan-name-flex-box>h6 {
     display: none;
+    font-weight: 400;
 }
 
 .plan-period>input {
@@ -306,7 +307,7 @@ input:focus {
 .add-ons__container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: .8rem;
 }
 
 .add-on__item>input{
@@ -321,7 +322,7 @@ input:focus {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: solid var(--color-gray) 1px;
+    border: solid var(--color-gray) .5px;
     border-radius: .5rem;
     padding: 1rem;
 }
@@ -336,7 +337,7 @@ input:focus {
     width: 1.5rem;
     height: 1.5rem;
     padding: 3px;
-    border: solid 1px var(--color-gray);
+    border: solid .5px var(--color-gray);
     border-radius: .3rem;
 }
 
@@ -350,7 +351,7 @@ input:focus {
 
 
 .plans,
-.personal-info,
+.add-ons,
 .summary {
     display: none;
 }

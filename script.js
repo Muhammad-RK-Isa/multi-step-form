@@ -87,3 +87,19 @@ const periodSelectorMonthly = () => {
 
 // Add-on 
 
+const addOnsItems = document.querySelectorAll('.add-on__item');
+
+for (let i = 0; i < addOnsItems.length; i++) {
+    const addOnItem = addOnsItems[i];
+    const input = addOnItem.querySelector('input');
+    const addOn = addOnItem.querySelector('.add-on');
+    const checkBox = addOn.querySelector('.check-box');
+    addOnItem.addEventListener('click', () => {
+        if (input.checked) {
+            checkBox.style.backgroundColor = 'var(--color-secondary)';
+        }
+        else{
+            checkBox.style.backgroundColor = 'transparent';
+        }
+    });
+};
