@@ -58,16 +58,19 @@
       </div>
     </div>
 
-    <!-- Content Personal Info -->
+    <!-- Content -->
     <div class="contents">
 
       <!-- Personal info -->
       <div class="content personal-info">
         <div class="content__main">
+
+          <!-- Heading  -->
           <div class="content__heading">
             <h1>Personal info</h1>
             <p>Please provide your name, email address, and phone number.</p>
           </div>
+
           <form action="" class="content__input-area">
             <div class="label-flex-group">
               <label for="name">Name</label>
@@ -99,11 +102,11 @@
             <h1>Select your plan</h1>
             <p>You have the option of monthly or yearly billing.</p>
           </div>
-
+          
           <!-- Plans container -->
-          <div class="plans__container">
+          <form class="plans__container">
             <!-- Plan arcade -->
-            <input type="radio" id="arcade" name="plan">
+            <input type="radio" id="arcade" name="plan" value="9">
             <label for="arcade" class="plan">
               <img src="assets/images/icon-arcade.svg" alt="">
               <div class="plan-name-flex-box">
@@ -113,7 +116,7 @@
               </div>
             </label>
             <!-- Plan advanced -->
-            <input type="radio" id="advanced" name="plan">
+            <input type="radio" id="advanced" name="plan" value="12">
             <label for="advanced" class="plan">
               <img src="assets/images/icon-advanced.svg" alt="">
               <div class="plan-name-flex-box">
@@ -123,7 +126,7 @@
               </div>
             </label>
             <!-- Plan Pro -->
-            <input type="radio" id="pro" name="plan">
+            <input type="radio" id="pro" name="plan" value="15">
             <label for="pro" class="plan">
               <img src="assets/images/icon-pro.svg" alt="">
               <div class="plan-name-flex-box">
@@ -132,7 +135,7 @@
                 <h6>2 months free</h6>
               </div>
             </label>
-          </div>
+          </form>
           <!-- plan period -->
           <div class="plan-period">
             <input type="radio" id="yearly" name="period">
@@ -147,15 +150,86 @@
             </label>
           </div>
         </div>
-
+        
         <!-- Navigation -->
         <div class="navigation">
           <button type="button" class="btn-primary" id="plans-next-btn">Next Step</button>
           <button type="button" class="previous-btn" id="plans-previous-btn">Go Back</button>
         </div>
+        
+      </div>
+      
+      <!-- Add ons -->
+      <div class="content add-ons">
+
+        <div class="content__main">
+          <!-- Content heading -->
+          <div class="content__heading">
+            <h1>Pick add-ons</h1>
+            <p>Add-ons help enhance your gaming experience.</p>
+          </div>
+          
+          <!-- Add ons container -->
+          <form class="add-ons__container">
+            <div class="add-on__item">
+              <input type="checkbox" id="online-service" name="add-on" value="1">
+              <label for="online-service" class="add-on">
+                <div class="add-on__content">
+                  <img class="check-box" src="assets/images/icon-checkmark.svg" alt="">
+                  <div>
+                    <h4>Online service</h4>
+                    <p>Acces to multiplayer games</p>
+                  </div>
+                </div>
+                <div class="add-on__pricing">
+                  <p>+$1/mo</p>
+                </div>
+              </label>
+            </div>
+            
+            <div class="add-on__item">
+              <input type="checkbox" id="larger-storage" name="add-on" value="2">
+              <label for="larger-storage" class="add-on">
+                <div class="add-on__content">
+                  <img class="check-box" src="assets/images/icon-checkmark.svg" alt="">
+                  <div>
+                    <h4>Larger Storage</h4>
+                    <p>Extra 1TB of cloud save</p>
+                  </div>
+                </div>
+                <div class="add-on__pricing">
+                  <p>+$2/mo</p>
+                </div>
+              </label>
+            </div>
+            
+            <div class="add-on__item">
+              <input type="checkbox" id="customizable-profile" name="add-on" value="2">
+              <label for="customizable-profile" class="add-on">
+                <div class="add-on__content">
+                  <img class="check-box" src="assets/images/icon-checkmark.svg" alt="">
+                  <div>
+                    <h4>Customizable Profile</h4>
+                    <p>Custom theme on your profile</p>
+                  </div>
+                </div>
+                <div class="add-on__pricing">
+                  <p>+$2/mo</p>
+                </div>
+              </label>
+            </div>
+          </form>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation">
+          <button type="button" class="btn-primary" id="add-ons-next-btn">Next Step</button>
+          <button type="button" class="previous-btn" id="add-ons-previous-btn">Go Back</button>
+        </div>
 
       </div>
-
+      
     </div>
   </div>
 

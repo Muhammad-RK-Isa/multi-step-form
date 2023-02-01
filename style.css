@@ -139,8 +139,7 @@ input:focus {
     flex-direction: row-reverse;
 }
 
-/* ===============================================================sidebar=================================== */
-
+/* Sidebar */
 .container__top-img {
     display: none;
 }
@@ -189,10 +188,17 @@ input:focus {
     color: var(--color-primary);
 }
 
-/* Content main */
+/* Contents main */
 
-/* ================================================personal info=================================================================== */
+.contents h4 {
+    font-size: 1rem;
+}
 
+.contents p {
+    font-size: .875rem;
+}
+
+/* Personal info */
 .content__input-area {
     color: var(--color-primary);
     display: flex;
@@ -223,7 +229,7 @@ input:focus {
     font-weight: 700;
 }
 
-/* =========================================================================================Plan========================================================== */
+/* Plan */
 .plans__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -268,10 +274,12 @@ input:focus {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    background-color: var(--color-bg-inner);
 }
 
 .plan-name-flex-box>h6 {
     display: none;
+    font-weight: 400;
 }
 
 .plan-period>input {
@@ -282,7 +290,7 @@ input:focus {
     display: none;
 }
 
-.plan-period>input:checked + label>p {
+.plan-period>input:checked+label>p {
     color: var(--color-primary);
 }
 
@@ -294,9 +302,53 @@ input:focus {
     display: none;
 }
 
-.sibling {
+/* Add-ons */
+
+.add-ons__container {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.add-on__item>input{
     display: none;
 }
+
+.add-on__item>input:checked+label{
+    border-color: var(--color-secondary);
+}
+
+.add-on{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid var(--color-gray) .5px;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.add-on__content{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.add-on img{
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 3px;
+    border: solid .5px var(--color-gray);
+    border-radius: .3rem;
+}
+
+.add-on h4 {
+    color: var(--color-primary);
+}
+
+.add-on__pricing {
+    justify-self: flex-end ;
+}
+
 
 .plans,
 .add-ons,
@@ -386,7 +438,7 @@ input:focus {
         position: absolute;
         top: 8rem;
         left: 5%;
-        padding: 2rem;
+        padding: 1.5rem;
         gap: 1rem;
         box-shadow: .5rem .5rem 20rem hsla(231, 11%, 63%, 0.351);
     }
@@ -407,6 +459,16 @@ input:focus {
 
     .plan>img {
         margin-bottom: 0;
+    }
+
+    /* Add-ons  */
+
+    .add-on{
+        padding: 1rem .8rem;
+    }
+
+    .add-on__content{
+        gap: .8rem;
     }
 }
 
