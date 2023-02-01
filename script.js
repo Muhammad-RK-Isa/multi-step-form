@@ -50,39 +50,60 @@ addOnsPreviousBtn.addEventListener('click', () => {
 
 
 // Plans container
-const periodSelectorYearly = () => {
-    const planBox1 = document.getElementsByClassName('plan-name-flex-box')[0];
-    const planBox2 = document.getElementsByClassName('plan-name-flex-box')[1];
-    const planBox3 = document.getElementsByClassName('plan-name-flex-box')[2];
+const planBox1 = document.getElementsByClassName('plan-name-flex-box')[0];
+const planBox2 = document.getElementsByClassName('plan-name-flex-box')[1];
+const planBox3 = document.getElementsByClassName('plan-name-flex-box')[2];
 
-    planBox1.querySelector('p').innerText = "$90/yr";
-    planBox2.querySelector('p').innerText = "$120/yr";
-    planBox3.querySelector('p').innerText = "$150/yr";
+const planPricing1 = planBox1.querySelector('p');
+const planPricing2 = planBox2.querySelector('p');
+const planPricing3 = planBox3.querySelector('p');
+
+// Add-ons price tags
+const addOns1 = document.getElementsByClassName('add-on__pricing')[0];
+const addOns2 = document.getElementsByClassName('add-on__pricing')[1];
+const addOns3 = document.getElementsByClassName('add-on__pricing')[2];
+
+const addOnPrice1 = addOns1.querySelector('p');
+const addOnPrice2 = addOns2.querySelector('p');
+const addOnPrice3 = addOns3.querySelector('p');
+
+// Period selector yearly 
+const periodSelectorYearly = () => {
+    // Plans 
+    planPricing1.innerText = "$90/yr";
+    planPricing2.innerText = "$120/yr";
+    planPricing3.innerText = "$150/yr";
 
     const planBoxes = document.getElementsByClassName('plan-name-flex-box');
-
+    
     for (let i = 0; i < planBoxes.length; i++) {
         const planBox = planBoxes[i];
         planBox.querySelector('h6').style.display = 'block';
     }
+    
+    // Add-ons 
+    addOnPrice1.innerText = '$10/yr';
+    addOnPrice2.innerText = '$20/yr';
+    addOnPrice3.innerText = '$20/yr';
 };
 
-// Period Selector 
+// Period Selector monthly
 const periodSelectorMonthly = () => {
-    const planBox1 = document.getElementsByClassName('plan-name-flex-box')[0];
-    const planBox2 = document.getElementsByClassName('plan-name-flex-box')[1];
-    const planBox3 = document.getElementsByClassName('plan-name-flex-box')[2];
-
-    planBox1.querySelector('p').innerText = "$9/mo";
-    planBox2.querySelector('p').innerText = "$12/mo";
-    planBox3.querySelector('p').innerText = "$15/mo";
-
+    planPricing1.innerText = "$9/mo";
+    planPricing2.innerText = "$12/mo";
+    planPricing3.innerText = "$15/mo";
+    
     const planBoxes = document.getElementsByClassName('plan-name-flex-box');
 
     for (let i = 0; i < planBoxes.length; i++) {
         const planBox = planBoxes[i];
         planBox.querySelector('h6').style.display = 'none';
     };
+
+    // Add-ons
+    addOnPrice1.innerText = '$1/mo';
+    addOnPrice2.innerText = '$2/mo';
+    addOnPrice3.innerText = '$2/mo';
 };
 
 // Add-on 
@@ -98,8 +119,9 @@ for (let i = 0; i < addOnsItems.length; i++) {
         if (input.checked) {
             checkBox.style.backgroundColor = 'var(--color-secondary)';
         }
-        else{
+        else {
             checkBox.style.backgroundColor = 'transparent';
         }
     });
+
 };

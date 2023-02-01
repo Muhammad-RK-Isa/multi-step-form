@@ -346,7 +346,11 @@ input:focus {
 }
 
 .add-on__pricing {
-    justify-self: flex-end ;
+    justify-self: flex-end;
+}
+
+.add-on__pricing>p{
+    color: var(--color-secondary);
 }
 
 
