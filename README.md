@@ -33,9 +33,9 @@ Users should be able to:
 
 ## Mobile preview
 ![](./design/mobile-design-step-1.jpg)
-![](./design/mobile-design-step-2.jpg)
-![](./design/mobile-design-step-3.jpg)
-![](./design/mobile-design-step-4.jpg)
+![](./design/mobile-design-step-2-monthly.jpg)
+![](./design/mobile-design-step-3-monthly.jpg)
+![](./design/mobile-design-step-4-monthly.jpg)
 
 ### Links
 
