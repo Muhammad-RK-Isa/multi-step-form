@@ -17,35 +17,45 @@ const summaryTotalPeriod = document.getElementById('summary__total-period');
 const changePlan = document.getElementById('change-plan');
 
 // Personal info navigation 
+const personalInfoInputFields = document.getElementsByName('personal-info');
+const alertEmpty = document.getElementsByClassName('alert-empty');
+
 personalInfoNextBtn.addEventListener('click', () => {
-    const personalInfoInputFields = document.getElementsByName('personal-info');
-    const labelFlexGroup = document.getElementsByClassName('label-flex-group');
-    const alertEmpty = document.getElementsByClassName('alert-empty');
-    let input = [];
+    const nameInput = personalInfoInputFields[0].value;
+    const emailInput = personalInfoInputFields[1].value;
+    const phoneInput = personalInfoInputFields[2].value;
 
+    if ((nameInput === '' || emailInput === '' || phoneInput === '')) {
+        alertEmptyInput();
+    }
+    else if (emailInput.includes('@') === false) {
+        alertEmpty[1].style.display = 'block';
+        alertEmpty[1].innerText = 'Please provide a valid email address!';
+        // alertEmptyInput();
+    }
+    else {
+        contentPersonalInfo.style.display = 'none';
+        contentPlans.style.display = 'flex';
+        steps[0].classList.toggle('active');
+        steps[1].classList.toggle('active');
+        alertEmptyInput();
+    };
+});
+
+// Alert 
+const alertEmptyInput = () => {
     for (let i = 0; i < personalInfoInputFields.length; i++) {
-        const element = personalInfoInputFields[i];
-        const empty = alertEmpty[i];
-        switch (element.value == '') {
-            case false:
-                input.push(false);
-                break;
+        const personalInfoInput = personalInfoInputFields[i];
+        switch (personalInfoInput.value === '') {
             case true:
-                input[i] = true;
-                empty.style.display = 'block';
-                element.style.border = 'solid 2px var(--color-danger)';
-        };
-
-        switch (input[0] && input[1] && input[2]) {
+                alertEmpty[i].style.display = 'block';
+                break;
             case false:
-                contentPersonalInfo.style.display = 'none';
-                contentPlans.style.display = 'flex';
-                steps[0].classList.toggle('active');
-                steps[1].classList.toggle('active');
+                alertEmpty[i].style.display = 'none';
                 break;
         };
     };
-});
+};
 
 
 // Plans navigation
